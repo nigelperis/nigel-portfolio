@@ -132,7 +132,7 @@ body {
   border-radius: 10px;
   padding: 20px;
   margin: 40px;
-  text-align: center;
+  text-align: left;
   width: 400px; /* Adjust the width as needed */
   height: 400px; /* Adjust the height as needed */
   position: relative;
@@ -140,8 +140,8 @@ body {
 }
 
 .project img {
-  width: 150px; /* Adjust the width as needed */
-  height: 150px; /* Adjust the height as needed */
+  width: 400px; /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
