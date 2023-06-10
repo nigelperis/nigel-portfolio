@@ -26,12 +26,12 @@ app.post('/contact', (req, res) => {
 
   // Configure the email options
   const mailOptions = {
-    from: '${email}',
+    from: email,
     to: 'nperis27@gmail.com',
     subject: `New Message from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
-  
+
   // Send the email
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
@@ -39,7 +39,7 @@ app.post('/contact', (req, res) => {
       res.status(500).send('Error sending email');
     } else {
       console.log('Email sent: ' + info.response);
-      res.status(200).send('Email sent successfully');
+      res.redirect('/success'); // Redirect to success.html
     }
   });
 });
@@ -57,6 +57,11 @@ app.get('/projects', (req, res) => {
 // Serve the contact.html file for /contact URL
 app.get('/contact', (req, res) => {
   res.sendFile(path.join(__dirname, 'contact.html'));
+});
+
+// Serve the success.html file for /success URL
+app.get('/success', (req, res) => {
+  res.sendFile(path.join(__dirname, 'success.html'));
 });
 
 // Start the server
