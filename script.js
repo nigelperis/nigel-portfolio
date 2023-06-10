@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     {
       image: "/images/proj1.jpg",
       title: "Vegetable Disease Detection",
-      description: "Developed a web app with a CNN model using Machine Learning to classify Tomato and Corn Images into 12 diseases and identify their health status",
+      description: "Developed a web app with a CNN model using Machine Learning to classify Tomato and Corn Images into 12 diseases and identify their health status.",
       githubLink: "https://github.com/nigelperis/vegetable-disease-detection"
     },
     {
