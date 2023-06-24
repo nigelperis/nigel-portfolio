@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-69XFX59R5Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-69XFX59R5Q');
+    </script>
 </head>
+
 <body>
     <nav>
         <a href="index.html">Home</a>
         <a href="projects.html" onclick="loadProjects()">Projects</a>
         <a href="contact.html" onclick="loadContactForm()">Contact</a>
     </nav>
-    
+
     <div class="contact-container">
         <form class="contact-form" action="/contact" method="post">
             <input type="text" name="name" placeholder="Name" required>
@@ -21,9 +31,10 @@
             <button type="submit">Send</button>
         </form>
     </div>
-    
+
     <footer>
         <p>&copy; 2023 Nigel | All rights reserved.</p>
     </footer>
 </body>
+
 </html>

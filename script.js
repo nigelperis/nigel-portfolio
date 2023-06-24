@@ -1,7 +1,7 @@
 function loadContent(url, targetId) {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url, true);
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       document.getElementById(targetId).innerHTML = xhr.responseText;
     }
@@ -17,7 +17,7 @@ function loadContactForm() {
   loadContent("contact.html", "content");
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const projectsContainer = document.querySelector("#projectsContainer");
 
   // Array of projects
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault();
 
     document.querySelector(this.getAttribute("href")).scrollIntoView({
