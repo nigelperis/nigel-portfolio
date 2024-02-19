@@ -23,13 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Array of projects
   const projects = [
     {
-      image: "/images/proj1.jpg",
+      image: "images/proj1.jpg",
       title: "Vegetable Disease Detection",
       description: "Developed a web app with a CNN model using Machine Learning to classify Tomato and Corn Images into 12 diseases and identify their health status.",
       githubLink: "https://github.com/nigelperis/vegetable-disease-detection"
     },
     {
-      image: "/images/proj2.jpg",
+      image: "images/proj2.jpg",
       title: "Portfolio Site for Ganesh Designmatics Ltd",
       description: "Developed a web app with visually appealing gallery, contact pages, and user login functionality with secure email storage.",
       githubLink: "https://github.com/nigelperis/SiteForGaneshDesignmaticsLtd"

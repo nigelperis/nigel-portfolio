@@ -92,6 +92,7 @@ nav a:hover {
 .rectangle:hover {
   border-color: #ffd04e;
   box-shadow: 0 0 1rem 0 #ff8b00;
+  cursor: grab;
 }
 
 .rectangle:hover::before {
@@ -135,6 +136,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+
 }
 
 .project {
