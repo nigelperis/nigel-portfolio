@@ -1,29 +1,40 @@
+require("dotenv").config();
 const path = require("path");
 const nodemailer = require("nodemailer");
 const bodyParser = require("body-parser");
 const express = require("express");
+const helmet = require("helmet");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const publicPath = path.join(__dirname, "frontend");
 
+// Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(publicPath));
+app.use(helmet());
 
+// Nodemailer transporter
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "nperis27@gmail.com",
-    pass: "vuhdmdolawntwogm",
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
   },
 });
 
+// Routes
 app.post("/contact", (req, res) => {
   const { name, email, message } = req.body;
+
+  if (!name || !email || !message) {
+    return res.status(400).send("All fields are required.");
+  }
+
   const mailOptions = {
     from: email,
-    to: "nperis27@gmail.com",
+    to: process.env.MAIL_USER,
     subject: `New Message from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
@@ -39,9 +50,9 @@ app.post("/contact", (req, res) => {
   });
 });
 
-
+// Static file routes
 app.get("/", (req, res) => {
-  res.sendFile(path.join(publicPath,'..',"index.html"));
+  res.sendFile(path.join(publicPath, "..", "index.html"));
 });
 
 app.get("/projects", (req, res) => {
@@ -54,6 +65,11 @@ app.get("/contact", (req, res) => {
 
 app.get("/success", (req, res) => {
   res.sendFile(path.join(publicPath, "success.html"));
+});
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
 });
 
 app.listen(port, () => {

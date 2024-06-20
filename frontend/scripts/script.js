@@ -25,18 +25,20 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       image: "images/proj1.jpg",
       title: "Vegetable Disease Detection",
-      description: "Developed a web app with a CNN model using Machine Learning to classify Tomato and Corn Images into 12 diseases and identify their health status.",
-      githubLink: "https://github.com/nigelperis/vegetable-disease-detection"
+      description:
+        "Developed a web app with a CNN model using Machine Learning to classify Tomato and Corn Images into 12 diseases and identify their health status.",
+      githubLink: "https://github.com/nigelperis/vegetable-disease-detection",
     },
     {
       image: "images/proj2.jpg",
       title: "Portfolio Site for Ganesh Designmatics Ltd",
-      description: "Developed a web app with visually appealing gallery, contact pages, and user login functionality with secure email storage.",
-      githubLink: "https://github.com/nigelperis/SiteForGaneshDesignmaticsLtd"
-    }
+      description:
+        "Developed a web app with visually appealing gallery, contact pages, and user login functionality with secure email storage.",
+      githubLink: "https://github.com/nigelperis/SiteForGaneshDesignmaticsLtd",
+    },
   ];
 
-  projects.forEach(project => {
+  projects.forEach((project) => {
     const projectElement = document.createElement("div");
     projectElement.classList.add("project");
     projectElement.innerHTML = `
@@ -52,12 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
 
     document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth"
+      behavior: "smooth",
     });
   });
 });

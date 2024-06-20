@@ -20,15 +20,16 @@ This portfolio is built using vanilla HTML, CSS, and JavaScript for the frontend
 ## Installation
 
 1. Clone the repository:
-`git clone https://github.com/nigelperis/nigel-portfolio.git`
+   `git clone https://github.com/nigelperis/nigel-portfolio.git`
 
-2. Install dependencies: 
-`npm i`/`npm install`
+2. Install dependencies:
+   `npm i`/`npm install`
 
-3. Start the server: 
-`node server.js`
+3. Start the server:
+   `node server.js`
 
 ## Usage
+
 - Check out the projects section to view my recent works.
 - Use the contact form to reach out to me for collaboration or inquiries.
 
