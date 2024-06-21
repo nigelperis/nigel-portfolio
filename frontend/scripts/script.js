@@ -1,16 +1,16 @@
 function loadContent(url, targetId) {
   fetch(url)
-    .then(response => {
+    .then((response) => {
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
       return response.text();
     })
-    .then(data => {
+    .then((data) => {
       document.getElementById(targetId).innerHTML = data;
     })
-    .catch(error => {
-      console.error('Error fetching content:', error);
+    .catch((error) => {
+      console.error("Error fetching content:", error);
     });
 }
 

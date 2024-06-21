@@ -2,9 +2,9 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "format": "prettier --write ."
+    "start": "bun run server.js",
+    "start:dev": "bun run nodemon server.js",
+    "format": "bun run prettier --write ."
   },
   "dependencies": {
     "body-parser": "^1.20.2",
