@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  font-family: "Comic Sans MS", monospace;
+  font-family: 'Comic Sans MS', monospace;
   min-height: 100vh;
   background-image: linear-gradient(
       45deg,
@@ -110,7 +110,7 @@ nav a:hover {
 }
 
 .rectangle::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -1rem;
   left: -1rem;

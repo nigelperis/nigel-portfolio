@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="icon" href="images/favicon.png" type="image/png" />
     <script src="scripts/script.js"></script>
   </head>
   <body>
@@ -37,7 +37,13 @@
       </div>
     </div>
     <footer>
-      <p>&copy; 2024 Nigel Peris | Built with passion and dedication 🖤</p>
+      <p>
+        &copy;<span id="year"></span> Nigel Peris | Built with passion and
+        dedication 🖤
+      </p>
     </footer>
   </body>
+  <script>
+    document.querySelector('#year').textContent = new Date().getFullYear();
+  </script>
 </html>
