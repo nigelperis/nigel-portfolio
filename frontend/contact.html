@@ -25,7 +25,13 @@
     </div>
 
     <footer>
-      <p>&copy; 2024 Nigel Peris | Built with passion and dedication 🖤</p>
+      <p>
+        &copy;<span id="year"></span> Nigel Peris | Built with passion and
+        dedication 🖤
+      </p>
     </footer>
   </body>
+  <script>
+    document.querySelector("#year").textContent = new Date().getFullYear();
+  </script>
 </html>
